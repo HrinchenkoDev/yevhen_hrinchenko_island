@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <simulation>
-        <islandWidth>100</islandWidth>
-        <islandHeight>20</islandHeight>
+        <islandWidth>10</islandWidth>
+        <islandHeight>10</islandHeight>
         <tickDurationMs>500</tickDurationMs>
         <maxTicks>500</maxTicks>
     </simulation>

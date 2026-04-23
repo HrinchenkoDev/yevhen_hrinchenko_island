@@ -34,10 +34,29 @@ public class Simulation {
         // Проходимося по кожному запису в нашому словнику стартових популяцій
         for (Map.Entry<String, Integer> entry : Config.STARTING_POPULATION.entrySet()) {
             String type = entry.getKey(); // Наприклад, "Wolf"
-            int count = entry.getValue();  // Наприклад, 100
+            int maxStartingCount = entry.getValue();
+
+            int actualCount;
+
+            // Логіка для рослин (їх має бути достатньо на старті, щоб травоїдні не померли одразу)
+            if (type.equals("Plant")) {
+                // Від половини максимуму до максимуму
+                int minPlants = maxStartingCount / 2;
+                actualCount = ThreadLocalRandom.current().nextInt(minPlants, maxStartingCount + 1);
+            }
+            // Логіка для тварин
+            else {
+                // Перевіряємо, щоб максимум був хоча б 2 (інакше random видасть помилку)
+                if (maxStartingCount >= 2) {
+                    // Генеруємо від 2 до вказаного максимуму
+                    actualCount = ThreadLocalRandom.current().nextInt(2, maxStartingCount + 1);
+                } else {
+                    actualCount = maxStartingCount;
+                }
+            }
 
             // Створюємо і розміщуємо потрібну кількість сутностей
-            for (int i = 0; i < count; i++) {
+            for (int i = 0; i < actualCount; i++) {
                 placeRandomly(type);
             }
         }

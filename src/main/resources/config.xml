@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <simulation>
+        <islandWidth>100</islandWidth>
+        <islandHeight>20</islandHeight>
+        <tickDurationMs>500</tickDurationMs>
+        <maxTicks>500</maxTicks>
+    </simulation>
+
+    <entities>
+
+        <entity type="Wolf">
+            <weight>50</weight>
+            <maxPerCell>30</maxPerCell>
+            <speed>3</speed>
+            <foodNeeded>8</foodNeeded>
+            <startingPopulation>100</startingPopulation>
+            <maxOffspring>3</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Horse" probability="10"/>
+                <victim type="Deer" probability="15"/>
+                <victim type="Rabbit" probability="60"/>
+                <victim type="Mouse" probability="80"/>
+                <victim type="Goat" probability="60"/>
+                <victim type="Sheep" probability="70"/>
+                <victim type="Boar" probability="15"/>
+                <victim type="Buffalo" probability="10"/>
+                <victim type="Duck" probability="40"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Boa">
+            <weight>15</weight>
+            <maxPerCell>30</maxPerCell>
+            <speed>1</speed>
+            <foodNeeded>3</foodNeeded>
+            <startingPopulation>50</startingPopulation>
+            <maxOffspring>5</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Fox" probability="15"/>
+                <victim type="Rabbit" probability="20"/>
+                <victim type="Mouse" probability="40"/>
+                <victim type="Duck" probability="10"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Fox">
+            <weight>8</weight>
+            <maxPerCell>30</maxPerCell>
+            <speed>2</speed>
+            <foodNeeded>2</foodNeeded>
+            <startingPopulation>50</startingPopulation>
+            <maxOffspring>4</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Rabbit" probability="70"/>
+                <victim type="Mouse" probability="90"/>
+                <victim type="Duck" probability="60"/>
+                <victim type="Caterpillar" probability="40"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Bear">
+            <weight>500</weight>
+            <maxPerCell>5</maxPerCell>
+            <speed>2</speed>
+            <foodNeeded>80</foodNeeded>
+            <startingPopulation>20</startingPopulation>
+            <maxOffspring>2</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Boa" probability="80"/>
+                <victim type="Horse" probability="40"/>
+                <victim type="Deer" probability="80"/>
+                <victim type="Rabbit" probability="80"/>
+                <victim type="Mouse" probability="90"/>
+                <victim type="Goat" probability="70"/>
+                <victim type="Sheep" probability="70"/>
+                <victim type="Boar" probability="50"/>
+                <victim type="Buffalo" probability="20"/>
+                <victim type="Duck" probability="10"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Eagle">
+            <weight>6</weight>
+            <maxPerCell>20</maxPerCell>
+            <speed>3</speed>
+            <foodNeeded>1</foodNeeded>
+            <startingPopulation>50</startingPopulation>
+            <maxOffspring>2</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Fox" probability="10"/>
+                <victim type="Rabbit" probability="90"/>
+                <victim type="Mouse" probability="90"/>
+                <victim type="Duck" probability="80"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Horse">
+            <weight>400</weight>
+            <maxPerCell>20</maxPerCell>
+            <speed>4</speed>
+            <foodNeeded>60</foodNeeded>
+            <startingPopulation>200</startingPopulation>
+            <maxOffspring>1</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Plant" probability="100"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Deer">
+            <weight>300</weight>
+            <maxPerCell>20</maxPerCell>
+            <speed>4</speed>
+            <foodNeeded>50</foodNeeded>
+            <startingPopulation>200</startingPopulation>
+            <maxOffspring>1</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Plant" probability="100"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Rabbit">
+            <weight>2</weight>
+            <maxPerCell>150</maxPerCell>
+            <speed>2</speed>
+            <foodNeeded>0.45</foodNeeded>
+            <startingPopulation>1000</startingPopulation>
+            <maxOffspring>6</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Plant" probability="100"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Mouse">
+            <weight>0.05</weight>
+            <maxPerCell>500</maxPerCell>
+            <speed>1</speed>
+            <foodNeeded>0.01</foodNeeded>
+            <startingPopulation>2000</startingPopulation>
+            <maxOffspring>8</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Caterpillar" probability="90"/>
+                <victim type="Plant" probability="100"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Goat">
+            <weight>60</weight>
+            <maxPerCell>140</maxPerCell>
+            <speed>3</speed>
+            <foodNeeded>10</foodNeeded>
+            <startingPopulation>300</startingPopulation>
+            <maxOffspring>2</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Plant" probability="100"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Sheep">
+            <weight>70</weight>
+            <maxPerCell>140</maxPerCell>
+            <speed>3</speed>
+            <foodNeeded>15</foodNeeded>
+            <startingPopulation>300</startingPopulation>
+            <maxOffspring>2</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Plant" probability="100"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Boar">
+            <weight>400</weight>
+            <maxPerCell>50</maxPerCell>
+            <speed>2</speed>
+            <foodNeeded>50</foodNeeded>
+            <startingPopulation>150</startingPopulation>
+            <maxOffspring>4</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Mouse" probability="50"/>
+                <victim type="Caterpillar" probability="90"/>
+                <victim type="Plant" probability="100"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Buffalo">
+            <weight>700</weight>
+            <maxPerCell>10</maxPerCell>
+            <speed>3</speed>
+            <foodNeeded>100</foodNeeded>
+            <startingPopulation>100</startingPopulation>
+            <maxOffspring>1</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Plant" probability="100"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Duck">
+            <weight>1</weight>
+            <maxPerCell>200</maxPerCell>
+            <speed>4</speed>
+            <foodNeeded>0.15</foodNeeded>
+            <startingPopulation>500</startingPopulation>
+            <maxOffspring>5</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Caterpillar" probability="90"/>
+                <victim type="Plant" probability="100"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Caterpillar">
+            <weight>0.01</weight>
+            <maxPerCell>1000</maxPerCell>
+            <speed>0</speed>
+            <foodNeeded>0</foodNeeded>
+            <startingPopulation>3000</startingPopulation>
+            <maxOffspring>0</maxOffspring>
+            <eatingProbabilities>
+                <victim type="Plant" probability="100"/>
+            </eatingProbabilities>
+        </entity>
+
+        <entity type="Plant">
+            <weight>1</weight>
+            <maxPerCell>200</maxPerCell>
+            <speed>0</speed>
+            <foodNeeded>0</foodNeeded>
+            <startingPopulation>10000</startingPopulation>
+            <maxOffspring>0</maxOffspring>
+            <eatingProbabilities>
+            </eatingProbabilities>
+        </entity>
+
+    </entities>
+</config>
